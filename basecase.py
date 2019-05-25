@@ -1,4 +1,4 @@
-from sklearn.datasets import make_classification
+
 from imblearn.under_sampling import NearMiss
 import numpy as np
 from sklearn.preprocessing import StandardScaler
@@ -19,7 +19,6 @@ y = data.loc[:, data.columns == 'Class']
 print("data size",collections.Counter(y['Class']))
 X_train, X_test, y_train, y_test = train_test_split(X,y,test_size = 0.3,train_size=0.7, random_state = 0)
 print("test data size",collections.Counter(y_test['Class']))
-#X1, y1 = make_classification(class_sep=2,weights=[0.99,0.01],n_features=15,n_redundant=0,n_repeated=0,n_informative=15,n_clusters_per_class=1,random_state=10,n_samples=100000)
 print("original training data size",collections.Counter(y_train['Class']))
 
 #random forest
